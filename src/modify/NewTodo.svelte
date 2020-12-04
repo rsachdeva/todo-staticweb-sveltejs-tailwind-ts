@@ -30,56 +30,6 @@
   });
 </script>
 
-<style>
-  .btn {
-    padding: 0.8rem 1rem 0.7rem;
-    border: 0.2rem solid #4d4d4d;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  .btn__primary {
-    color: #fff;
-    background-color: #000;
-  }
-  .btn__primary:disabled {
-    color: darkgrey;
-    background-color: #565656;
-  }
-  .label-wrapper {
-    margin: 0;
-    flex: 0 0 100%;
-    text-align: center;
-  }
-  .label__lg {
-    line-height: 1.01567;
-    font-weight: 300;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .input__lg {
-    padding: 2rem;
-    border: 2px solid #000;
-  }
-  .input__lg:focus {
-    border-color: #4d4d4d;
-    box-shadow: inset 0 0 0 2px;
-  }
-  [class*="__lg"] {
-    display: inline-block;
-    width: 100%;
-    font-size: 1.9rem;
-  }
-  [class*="__lg"]:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-  @media screen and (min-width: 620px) {
-    [class*="__lg"] {
-      font-size: 2.4rem;
-    }
-  }
-</style>
-
 <form
   on:submit|preventDefault={addTodo}
   on:keydown={(e) => e.key === 'Escape' && onCancel()}>

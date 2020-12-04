@@ -85,34 +85,6 @@
   };
 </script>
 
-<style>
-  .todoapp {
-    background: #fff;
-    margin: 2rem 0 4rem 0;
-    padding: 1rem;
-    position: relative;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-      0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
-  }
-  @media screen and (min-width: 550px) {
-    .todoapp {
-      padding: 4rem;
-    }
-  }
-  .todoapp > * {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Todo item styles */
-  .todo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-</style>
-
 <div class="todoapp stack-large">
   <!-- NewTodo -->
   <NewTodo {autoFocus} on:addTodo={(e) => addTodo(e.detail)} />

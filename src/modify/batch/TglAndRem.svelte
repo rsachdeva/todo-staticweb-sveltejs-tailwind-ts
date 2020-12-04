@@ -26,33 +26,6 @@
   }
 </script>
 
-<style>
-  .btn {
-    padding: 0.8rem 1rem 0.7rem;
-    border: 0.2rem solid #4d4d4d;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  .btn__primary {
-    color: #fff;
-    background-color: #000;
-  }
-  .btn__primary:disabled {
-    color: darkgrey;
-    background-color: #565656;
-  }
-  .btn-group {
-    display: flex;
-    justify-content: space-between;
-  }
-  .btn-group > * {
-    flex: 1 1 49%;
-  }
-  .btn-group > * + * {
-    margin-left: 0.8rem;
-  }
-</style>
-
 <div class="btn-group">
   <button
     type="button"
