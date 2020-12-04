@@ -56,13 +56,16 @@
     <form
       on:submit|preventDefault={onSave}
       on:keydown={(e) => e.key === 'Escape' && onCancel()}>
-      <div>
-        <label for="todo-{todo.id}">New name for '{todo.name}'</label>
+      <div class="m-10">
+        <label
+          class="text-2xl font-bold text-indigo-500"
+          for="todo-{todo.id}">New name for '{todo.name}'</label>
         <input
           bind:value={name}
           bind:this={nameEl}
           use:selectOnFocus
           use:focusOnInit
+          class="text-2xl p-10 font-bold text-gray-500"
           type="text"
           id="todo-{todo.id}"
           autoComplete="off" />
@@ -80,11 +83,14 @@
     <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
     <div>
       <input
+        class="p-10"
         type="checkbox"
         id="todo-{todo.id}"
         on:click={onToggle}
         checked={todo.completed} />
-      <label for="todo-{todo.id}">{todo.name}</label>
+      <label
+        class="text-2xl mb-3 font-bold text-gray-900 leading-tight"
+        for="todo-{todo.id}">{todo.name}</label>
     </div>
     <div>
       <button type="button" on:click={onEdit} use:focusEditButton>

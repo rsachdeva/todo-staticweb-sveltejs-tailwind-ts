@@ -85,7 +85,7 @@
   };
 </script>
 
-<div>
+<div class="bg-gray-100 ml-20">
   <!-- NewTodo -->
   <NewTodo {autoFocus} on:addTodo={(e) => addTodo(e.detail)} />
 
@@ -95,9 +95,12 @@
   <TodosStatus bind:this={todosStatus} {todos} />
 
   <!-- Todos -->
-  <ul role="list" aria-labelledby="list-heading">
+  <ul
+    class="bg-yellow-200 pl-5 mt-10 mb-5 rounded-lg shadow-xl"
+    role="list"
+    aria-labelledby="list-heading">
     {#each filterTodos(filter, todos) as todo (todo.id)}
-      <li>
+      <li class="mt-6">
         <Todo
           {todo}
           on:remove={(e) => {

@@ -14,12 +14,10 @@
 </script>
 
 <style global lang="postcss">
-  /* only apply purgecss on utilities, per Tailwind docs */
-  /* purgecss start ignore */
+  /* https://github.com/tailwindlabs/tailwindcss.com/issues/578 */
+  /* https://tailwindcss.com/docs/optimizing-for-production#purging-specific-layers purges all layers by default */
   @tailwind base;
   @tailwind components;
-  /* purgecss end ignore */
-
   @tailwind utilities;
 </style>
 
