@@ -26,16 +26,14 @@
   }
 </script>
 
-<div class="btn-group">
+<div>
   <button
     type="button"
-    class="btn btn__primary"
     disabled={todos.length === 0}
     on:click={checkAll}>{allChecked ? 'Uncheck' : 'Check'}
     all</button>
   <button
     type="button"
-    class="btn btn__primary"
     disabled={completedTodos === 0}
     on:click={removeCompleted}>Remove completed</button>
 </div>

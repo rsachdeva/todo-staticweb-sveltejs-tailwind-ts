@@ -85,7 +85,7 @@
   };
 </script>
 
-<div class="todoapp stack-large">
+<div>
   <!-- NewTodo -->
   <NewTodo {autoFocus} on:addTodo={(e) => addTodo(e.detail)} />
 
@@ -95,9 +95,9 @@
   <TodosStatus bind:this={todosStatus} {todos} />
 
   <!-- Todos -->
-  <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
+  <ul role="list" aria-labelledby="list-heading">
     {#each filterTodos(filter, todos) as todo (todo.id)}
-      <li class="todo">
+      <li>
         <Todo
           {todo}
           on:remove={(e) => {
