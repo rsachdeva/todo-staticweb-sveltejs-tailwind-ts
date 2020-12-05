@@ -94,10 +94,10 @@
     </div>
     <div>
       <button type="button" on:click={onEdit} use:focusEditButton>
-        Edit<span> {todo.name}</span>
+        Edit<span class="hidden"> {todo.name}</span>
       </button>
       <button type="button" on:click={onRemove}>
-        Delete<span> {todo.name}</span>
+        Delete<span class="hidden"> {todo.name}</span>
       </button>
     </div>
   {/if}

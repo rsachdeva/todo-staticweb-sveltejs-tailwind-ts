@@ -85,40 +85,44 @@
   };
 </script>
 
-<div class="bg-gray-100 ml-20">
-  <!-- NewTodo -->
-  <NewTodo {autoFocus} on:addTodo={(e) => addTodo(e.detail)} />
+<div class="flex mx-auto bg-white">
+  <div class="w-1/3 py-24 px-12">
+    <!-- NewTodo -->
+    <NewTodo {autoFocus} on:addTodo={(e) => addTodo(e.detail)} />
+  </div>
 
-  <FilterButton bind:filter />
+  <div class="w-1/2 py-24 px-12">
+    <FilterButton bind:filter />
 
-  <!-- TodosStatus -->
-  <TodosStatus bind:this={todosStatus} {todos} />
+    <!-- TodosStatus -->
+    <TodosStatus bind:this={todosStatus} {todos} />
 
-  <!-- Todos -->
-  <ul
-    class="bg-yellow-200 pl-5 mt-10 mb-5 rounded-lg shadow-xl"
-    role="list"
-    aria-labelledby="list-heading">
-    {#each filterTodos(filter, todos) as todo (todo.id)}
-      <li class="mt-6">
-        <Todo
-          {todo}
-          on:remove={(e) => {
-            console.log('e.detail is', e.detail);
-            removeTodo(e.detail);
-          }}
-          on:update={(e) => updateTodo(e.detail)} />
-      </li>
-    {:else}
-      <li>Nothing to do here!</li>
-    {/each}
-  </ul>
+    <!-- Todos -->
+    <ul
+      class="bg-yellow-200 pl-5 mt-10 mb-5 rounded-lg shadow-xl"
+      role="list"
+      aria-labelledby="list-heading">
+      {#each filterTodos(filter, todos) as todo (todo.id)}
+        <li class="mt-6">
+          <Todo
+            {todo}
+            on:remove={(e) => {
+              console.log('e.detail is', e.detail);
+              removeTodo(e.detail);
+            }}
+            on:update={(e) => updateTodo(e.detail)} />
+        </li>
+      {:else}
+        <li>Nothing to do here!</li>
+      {/each}
+    </ul>
 
-  <hr />
+    <hr />
 
-  <!-- MoreActions -->
-  <ToggleAndRemoveCompleted
-    {todos}
-    on:checkAll={(e) => checkAllTodos(e.detail)}
-    on:removeCompleted={removeCompletedTodos} />
+    <!-- MoreActions -->
+    <ToggleAndRemoveCompleted
+      {todos}
+      on:checkAll={(e) => checkAllTodos(e.detail)}
+      on:removeCompleted={removeCompletedTodos} />
+  </div>
 </div>

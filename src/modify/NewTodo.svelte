@@ -38,7 +38,7 @@
     <label class="text-pink-500" for="todo-0">What needs to be done?</label>
   </h2>
   <input
-    class="text-2xl font-bold text-gray-500"
+    class="w-full h-20 text-2xl font-bold text-gray-500"
     bind:value={name}
     bind:this={nameEl}
     use:selectOnFocus

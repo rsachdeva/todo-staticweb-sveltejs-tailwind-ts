@@ -14,7 +14,11 @@
   }
 </script>
 
-<h2 id="list-heading" bind:this={headingEl} tabindex={-1}>
+<h2
+  id="list-heading"
+  bind:this={headingEl}
+  tabindex={-1}
+  class="text-yellow-600 my-10 text-4xl">
   {completedTodos}
   out of
   {totalTodos}
