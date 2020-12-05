@@ -18,6 +18,10 @@
   /* https://tailwindcss.com/docs/optimizing-for-production#purging-specific-layers purges all layers by default */
   @tailwind base;
   @tailwind components;
+
+  .btn {
+    @apply px-5 py-3 rounded-lg shadow-lg bg-pink-800 hover:bg-pink-500 focus:outline-none focus:ring-4 focus:ring-gray-900 focus:bg-pink-300 m-3 text-white uppercase tracking-wider;
+  }
   @tailwind utilities;
 </style>
 

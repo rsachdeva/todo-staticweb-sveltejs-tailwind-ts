@@ -71,11 +71,17 @@
           autoComplete="off" />
       </div>
       <div>
-        <button on:click={onCancel} type="button">
-          Cancel<span>renaming {todo.name}</span>
+        <button
+          on:click={onCancel}
+          type="button"
+          class="btn lowercase bg-white text-red-300 text-sm font-mono">
+          Cancel<span class="hidden">renaming {todo.name}</span>
         </button>
-        <button type="submit" disabled={!name}>
-          Save<span>new name for {todo.name}</span>
+        <button
+          type="submit"
+          disabled={!name}
+          class="btn lowercase bg-white text-blue-300 text-sm font-mono">
+          Save<span class="hidden">new name for {todo.name}</span>
         </button>
       </div>
     </form>
@@ -93,10 +99,17 @@
         for="todo-{todo.id}">{todo.name}</label>
     </div>
     <div>
-      <button type="button" on:click={onEdit} use:focusEditButton>
+      <button
+        type="button"
+        on:click={onEdit}
+        use:focusEditButton
+        class="btn lowercase bg-white text-blue-300 text-sm font-mono">
         Edit<span class="hidden"> {todo.name}</span>
       </button>
-      <button type="button" on:click={onRemove}>
+      <button
+        type="button"
+        on:click={onRemove}
+        class="btn lowercase bg-white text-red-300 text-sm font-mono">
         Delete<span class="hidden"> {todo.name}</span>
       </button>
     </div>

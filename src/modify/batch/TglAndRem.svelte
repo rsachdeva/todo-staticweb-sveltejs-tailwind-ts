@@ -29,13 +29,13 @@
 <div>
   <button
     type="button"
-    class="px-5 py-3 rounded-lg shadow-lg bg-pink-800 text-white uppercase tracking-wider"
+    class="px-5 py-3 rounded-lg shadow-lg bg-pink-800 hover:bg-pink-500 focus:outline-none focus:shadow-outline m-3 text-white uppercase tracking-wider"
     disabled={todos.length === 0}
     on:click={checkAll}>{allChecked ? 'Uncheck' : 'Check'}
     all</button>
   <button
     type="button"
-    class="px-5 py-3 rounded-lg shadow-lg bg-pink-800 text-white uppercase tracking-wider"
+    class="px-5 py-3 rounded-lg shadow-lg bg-pink-800 hover:bg-pink-500 focus:outline-none focus:shadow-outline m-3 text-white uppercase tracking-wider"
     disabled={completedTodos === 0}
     on:click={removeCompleted}>Remove completed</button>
 </div>
